@@ -1,0 +1,96 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  background:#f4f4f4;
+}
+
+.divTable {
+  width: 90%;
+  margin: 20px auto 0;
+}
+
+.json-to-table table {
+  width: 100%;
+  display: table;
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+  border-spacing: 0;
+  border-collapse: collapse;
+  margin-top: 15px;
+  min-width: 700px;
+}
+
+.json-to-table tbody tr:first-child {
+  display: table-header-group;
+  height: 56px;
+  color: inherit;
+  display: table-row;
+  outline: none;
+  vertical-align: middle;
+}
+
+.json-to-table tbody tr:first-child td {
+  display: table-row-group;
+  height: 48px;
+  display: table-row;
+  outline: none;
+  vertical-align: middle;
+  color: rgba(0, 0, 0, 0.54);
+  font-size: 0.8125rem;
+  font-weight: 400;
+  display: table-cell;
+  padding: 4px 56px 4px 24px;
+  text-align: left;
+  border-bottom: 1px solid rgba(224, 224, 224, 1);
+  vertical-align: inherit;  
+}
+
+.json-to-table tbody tr td {
+  display: table-row-group;
+  height: 48px;
+  display: table-row;
+  outline: none;
+  vertical-align: middle;
+  color: rgba(0, 0, 0, 0.87);
+  font-size: 0.8125rem;
+  font-weight: 400;
+  display: table-cell;
+  padding: 4px 56px 4px 24px;
+  text-align: left;
+  border-bottom: 1px solid rgba(224, 224, 224, 1);
+  vertical-align: inherit; 
+  background: white;
+}
+
+.json-to-table table td{
+  border:none;
+}
+
+span {
+  transition: all 0.3s ease-in-out;
+}
+
+.MuiFormControl-marginNormal-93 {
+  margin: 2px!important;
+}
+
+table th, table th svg {
+  background: #EEEEEE;
+}
+
+.readonly {
+  background: rgba(0, 0, 0, 0.04);
+}
+
+tr:hover{
+  background: rgba(0, 0, 0, 0.07)
+}
+
+.without-padding label {
+  transform: translate(14px, 7px) scale(1);
+}
+
+.without-padding input {
+  padding: 5px;
+  font-size: 13px;
+}
