@@ -129,7 +129,7 @@ class DynamicGrid extends React.Component {
     handleClick = (event, id) => {
         const { selected } = this.state;
         const selectedIndex = selected.indexOf(id);
-        this.props.func.openLink(id, selected);
+        this.props.func.checkboxFunction(id, selected);
         let newSelected = [];
 
         if (selectedIndex === -1) {
