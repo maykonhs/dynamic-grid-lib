@@ -57,7 +57,7 @@ class DynamicCell extends React.Component {
     setEditable = (item, key) => {
 
         if (item.edit) {
-            if (item.edit.includes(key)) {
+            if (item.edit.indexOf(key) >= 0) {
                 var itens = item.edit.filter(item => item !== key);
                 item.edit = itens;
             }
@@ -76,7 +76,7 @@ class DynamicCell extends React.Component {
 
         return this.props.columns.map((item, index) => {
             if (!item.hasOwnProperty("nat_exibition") || item.nat_exibition !== false) {
-                if (item.nat_readonly === false || (this.props.item.edit && this.props.item.edit.includes(item.nat_autonumber))) {
+                if (item.nat_readonly === false || (this.props.item.edit && this.props.item.edit.indexOf(item.nat_autonumber) >= 0)) {
                     switch (item.nat_type) {
                         case 'int':
                         case 'decimal':

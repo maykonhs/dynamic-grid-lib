@@ -171,7 +171,7 @@ class DynamicGrid extends React.Component {
         itemSelect.map(item => {
             var itemAdd = this.props.grid.Grid.Rows.filter(function (i) { return i.id === item; })[0];
 
-            if (!this.state.itensDuplicate.includes(itemAdd)) {
+            if (!this.state.itensDuplicate.indexOf(itemAdd) >= 0) {
                 this.state.itensDuplicate.push(itemAdd);
             }
         });
