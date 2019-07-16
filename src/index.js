@@ -129,6 +129,7 @@ class DynamicGrid extends React.Component {
     handleClick = (event, id) => {
         const { selected } = this.state;
         const selectedIndex = selected.indexOf(id);
+        this.props.func.openLink(id, selected);
         let newSelected = [];
 
         if (selectedIndex === -1) {
@@ -143,7 +144,6 @@ class DynamicGrid extends React.Component {
                 selected.slice(selectedIndex + 1),
             );
         }
-
         this.setState({ selected: newSelected });
     };
 
