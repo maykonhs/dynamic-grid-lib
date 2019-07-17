@@ -281,7 +281,11 @@ class DynamicGrid extends React.Component {
                 </Paper>
                 <Grid container style={showAdd}>
                     <Grid item xs={12}>
-                        <Button variant="contained" color="primary" onClick={event => this.itensSelected(this.props.func)}>
+                        <Button
+                            variant="contained"
+                            color="primary"
+                            disabled={this.props.disableAddButton}
+                            onClick={event => this.itensSelected(this.props.func)}>
                             Adicionar
                         </Button>
                     </Grid>
