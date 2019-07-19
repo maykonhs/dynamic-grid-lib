@@ -235,7 +235,6 @@ class DynamicGrid extends React.Component {
                                                         checkedIcon={<CheckBoxIcon style={{ fontSize: 20 }} />}
                                                     />
                                                 </CustomCell>
-                                                <DynamicCell item={item} columns={columns} func={this.props.func} />
                                                 {
                                                     this.state.funcDeleted ?
                                                         <CustomCell onClick={event => this.removeItem(event, item.id)} className="readonly">
@@ -247,6 +246,7 @@ class DynamicGrid extends React.Component {
                                                         </CustomCell>
                                                         : null
                                                 }
+                                                <DynamicCell item={item} columns={columns} func={this.props.func} />
                                             </StyledTableRow>
                                         );
                                     })}

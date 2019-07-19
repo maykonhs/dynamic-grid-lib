@@ -43,6 +43,9 @@ class DynamicGridHead extends React.Component {
                             indeterminateIcon={<IndeterminateCheckBoxIcon style={{ fontSize: 20 }} />}
                         />
                     </CustomCell>
+                    {
+                        deleted ? <CustomCell key={data.length} /> : null
+                    }
                     {data.map(
                         row =>
                             !row.hasOwnProperty("nat_exibition") || row.nat_exibition !== false ?
@@ -77,9 +80,6 @@ class DynamicGridHead extends React.Component {
                         ,
                         this,
                     )}
-                    {
-                        deleted ? <CustomCell key={data.length} /> : null
-                    }
                 </StyledTableRow>
             </TableHead>
         );
