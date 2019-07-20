@@ -204,6 +204,7 @@ class DynamicGrid extends React.Component {
                         <Table className={classes.table} aria-labelledby="tableTitle" size="small">
                             <DynamicHead
                                 numSelected={selected.length}
+                                disabledCheckbox={this.props.disabledCheckbox}
                                 order={order}
                                 orderBy={orderBy}
                                 onSelectAllClick={this.handleSelectAllClick}
