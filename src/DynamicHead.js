@@ -18,7 +18,7 @@ const StyledTableRow = withStyles(theme => ({
 
 const CustomCell = withStyles({
     root: {
-        fontSize: 12
+        fontSize: 10
     }
 })(TableCell);
 

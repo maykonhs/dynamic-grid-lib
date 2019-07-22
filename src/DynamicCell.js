@@ -11,20 +11,20 @@ const CssTextField = withStyles({
         margin: 0,
         padding: 0,
         font: "unset",
-        fontSize: 12
+        fontSize: 10
     }
 })(TextField);
 
 const CustomButton = withStyles({
     root: {
-        fontSize: 12,
-        padding: '3px 6px'
+        fontSize: 9,
+        padding: '3px'
     }
 })(Button);
 
 const CustomCell = withStyles({
     root: {
-        fontSize: 12
+        fontSize: 10
     }
 })(TableCell);
 
