@@ -193,10 +193,12 @@ class DynamicCell extends React.Component {
                                 </CustomCell>
                             );
                         case 'date':
-                            var date = new Date(this.props.item[item.nat_autonumber]).toLocaleDateString('pt-BR');
+                            // var date = new Date(this.props.item[item.nat_autonumber]).toLocaleDateString('pt-BR');
                             return (
                                 <CustomCell key={item.nat_autonumber + index} className="readonly" onClick={this.handleClick(item.nat_autonumber, item)} className={item.nat_onclick ? 'readonly onClickClass' : 'readonly'}>
-                                    {date}
+                                    {
+                                        ((this.props.item[item.nat_autonumber] == '') || (this.props.item[item.nat_autonumber] == null)) ? '' : new Date(this.props.item[item.nat_autonumber]).toLocaleDateString('pt-BR')
+                                    }
                                 </CustomCell>
                             );
                         case 'button':
