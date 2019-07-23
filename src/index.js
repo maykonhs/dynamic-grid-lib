@@ -28,13 +28,14 @@ const styles = theme => ({
 
 const StyledTableRow = withStyles(theme => ({
     root: {
-        height: '30px'
+        height: '30px',
     }
 }))(TableRow);
 
 const CustomCell = withStyles({
     root: {
-        fontSize: 12
+        fontSize: 12,
+        padding: 2,
     },
 })(TableCell);
 
