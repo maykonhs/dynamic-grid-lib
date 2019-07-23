@@ -277,6 +277,9 @@ class DynamicGrid extends React.Component {
                         }}
                         onChangePage={this.handleChangePage}
                         onChangeRowsPerPage={this.handleChangeRowsPerPage}
+                        style={{
+                            overflowX: 'auto'
+                        }}
                         labelRowsPerPage={'Itens na página:'}
                         labelDisplayedRows={({ from, to, count }) => `Exibindo itens ${from} a ${to} | Total de registros: ${count} ${this.props.selected === false ? '' : ' | Itens selecionados: ' + this.state.selected.length}`}
                     />
