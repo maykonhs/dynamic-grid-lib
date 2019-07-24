@@ -281,8 +281,8 @@ class DynamicGrid extends React.Component {
                         style={{
                             overflowX: 'auto'
                         }}
-                        labelRowsPerPage={'Itens na página:'}
-                        labelDisplayedRows={({ from, to, count }) => `Exibindo itens ${from} a ${to} | Total de registros: ${count} ${this.props.selected === false ? '' : ' | Itens selecionados: ' + this.state.selected.length}`}
+                        labelRowsPerPage={'Mostrar:'}
+                        labelDisplayedRows={({ from, to, count }) => `De ${from} a ${to} | Total: ${count}`}
                     />
                 </Paper>
                 <Grid container style={showAdd}>
