@@ -90,8 +90,8 @@ class DynamicCell extends React.Component {
                                         InputLabelProps={{
                                             shrink: true
                                         }}
-                                        min={item.props[0].minNumber}
-                                        max={item.props[0].maxNumber}
+                                        min={item.prop.minNumber}
+                                        max={item.prop.maxNumber}
                                         margin="normal"
                                         onChange={this.handleChange(item.nat_autonumber, item)}
                                         required
@@ -154,7 +154,7 @@ class DynamicCell extends React.Component {
                                         autoFocus
                                         onChange={this.handleChange(item.nat_autonumber, item)}
                                     >
-                                        {item.props[0].options.map(option => (
+                                        {item.prop.options.map(option => (
                                             <MenuItem key={option.value} value={option.value}>
                                                 {option.displayText}
                                             </MenuItem>
@@ -237,7 +237,7 @@ class DynamicCell extends React.Component {
                                         disabled
 
                                     >
-                                        {item.props[0].options.map(option => (
+                                        {item.prop.options.map(option => (
                                             <MenuItem key={option.value} value={option.value}>
                                                 {option.displayText}
                                             </MenuItem>
