@@ -79,7 +79,7 @@ table th, table th svg {
 }
 
 .readonly {
-  background: rgba(0, 0, 0, 0.04);
+  background: rgba(255, 255, 255, 1);
 }
 
 tr:hover{
@@ -93,4 +93,8 @@ tr:hover{
 .without-padding input {
   padding: 5px;
   font-size: 13px;
+}
+
+.onClickClass:hover {
+	cursor: pointer;
 }
