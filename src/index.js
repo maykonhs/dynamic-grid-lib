@@ -23,6 +23,10 @@ const styles = theme => ({
     },
     tableWrapper: {
         overflowX: 'auto'
+    },
+    addButton: {
+        background: '#FF8C00',
+        fontSize: 10,
     }
 });
 
@@ -290,6 +294,7 @@ class DynamicGrid extends React.Component {
                         <Button
                             variant="contained"
                             color="primary"
+                            className={classes.addButton}
                             disabled={this.props.disableAddButton}
                             onClick={event => this.itensSelected(this.props.func)}>
                             Adicionar
