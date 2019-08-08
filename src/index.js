@@ -68,16 +68,20 @@ function getSorting(order, orderBy) {
 }
 
 function setOrderInitial(itens) {
-
     var order = '';
+    var orderBy = '';
     if (itens !== undefined) {
         itens.map(item => {
-            if (item.order === true) {
-                order = item.nat_autonumber;
+            if (item.nat_order === true) {
+                orderBy = item.nat_autonumber;
+                order = item.nat_sorting;
             }
         });
     }
-    return order;
+    return {
+        order,
+        orderBy,
+    };
 }
 
 function hasCount(columns) {
@@ -97,10 +101,10 @@ class DynamicGrid extends React.Component {
 
     constructor(props) {
         super(props);
-        let orderBy = setOrderInitial(props.grid.gridColumn);
+        let { orderBy, order } = setOrderInitial(props.grid.Grid.GridColumn);
 
         this.state = {
-            order: 'asc',
+            order: order ? order : 'asc',
             orderBy: orderBy,
             selected: [],
             itensDuplicate: [],
