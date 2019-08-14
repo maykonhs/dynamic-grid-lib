@@ -190,7 +190,12 @@ class DynamicCell extends React.Component {
                         case 'float':
                             let valor = '';
                             if ((this.props.item[item.nat_autonumber] != null) || (this.props.item[item.nat_autonumber] != undefined)) {
-                                valor = this.props.item[item.nat_autonumber].toString().replace('.', ',');
+                                valor = `${this.props.item[item.nat_autonumber]}`;
+                                if (valor.indexOf('.') > -1) {
+                                    valor = `${this.props.item[item.nat_autonumber]}0`;
+                                }
+                                valor = parseFloat(valor).toFixed(2)
+                                valor = valor.toString().replace('.', ',');
                             }
                             return (
                                 <CustomCell key={item.nat_autonumber + index} className="readonly" onClick={this.handleClick(item.nat_autonumber, item)} className={item.nat_onclick ? 'readonly onClickClass' : 'readonly'}>
