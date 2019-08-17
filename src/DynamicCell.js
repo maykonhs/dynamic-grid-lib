@@ -90,6 +90,7 @@ class DynamicCell extends React.Component {
                                         InputLabelProps={{
                                             shrink: true
                                         }}
+                                        InputProps={{ style: { fontSize: 10 } }}
                                         min={item.prop.minNumber}
                                         max={item.prop.maxNumber}
                                         margin="normal"
@@ -109,6 +110,7 @@ class DynamicCell extends React.Component {
                                         InputProps={{
                                             inputComponent: NumberFormatCustom
                                         }}
+                                        InputProps={{ style: { fontSize: 10 } }}
                                         required
                                         autoFocus
                                     />
@@ -122,6 +124,7 @@ class DynamicCell extends React.Component {
                                         type="date"
                                         onChange={this.handleChange(item.nat_autonumber, item)}
                                         value={this.props.item[item.nat_autonumber]}
+                                        InputProps={{ style: { fontSize: 10 } }}
                                         required
                                         autoFocus
                                     />
@@ -169,6 +172,7 @@ class DynamicCell extends React.Component {
                                         key={item.nat_autonumber + index}
                                         value={this.props.item[item.nat_autonumber]}
                                         onChange={this.handleChange(item.nat_autonumber, item)}
+                                        InputProps={{ style: { fontSize: 10 } }}
                                         margin="normal"
                                         autoFocus
                                         required
