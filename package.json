@@ -1,6 +1,6 @@
 {
   "name": "dynamic-grid-natura",
-  "version": "1.2.12",
+  "version": "1.2.13",
   "main": "build/index.js",
   "repository": {
     "type": "git",

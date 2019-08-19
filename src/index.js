@@ -26,7 +26,11 @@ const styles = theme => ({
     },
     addButton: {
         background: '#FF8C00',
+        color: '#FFF',
         fontSize: 10,
+        '&:hover': {
+            background: '#FFAE22',
+        },
     }
 });
 
@@ -298,7 +302,6 @@ class DynamicGrid extends React.Component {
                     <Grid item xs={12}>
                         <Button
                             variant="contained"
-                            color="primary"
                             className={classes.addButton}
                             disabled={this.props.disableAddButton}
                             onClick={event => this.itensSelected(this.props.func)}>
