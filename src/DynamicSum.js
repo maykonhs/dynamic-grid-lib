@@ -17,13 +17,13 @@ const CustomCell = withStyles({
 })(TableCell);
 
 function subtotal(items, colum) {
-	if(colum.nat_type === 'number'){
+	if(colum.nat_type === 'int'){
 		return items.map((item) => parseFloat(item[colum.nat_autonumber])).reduce((sum, i) => sum + i, 0);
 	}
-	else if(colum.nat_type === 'currency'){
+	else if(colum.nat_type === 'float'){
 		return <NumberFormat value={
-			(items.map((item) => parseFloat(item[colum.nat_autonumber])).reduce((sum, i) => sum + i, 0)).toFixed(2)
-			} displayType={'text'} thousandSeparator={','} decimalSeparator={'.'} prefix={'R$'} />
+			(items.map((item) => parseFloat(item[colum.nat_autonumber])).reduce((sum, i) => sum + i, 0)).toFixed(2).toString().replace('.', ',')
+			} displayType={'text'} thousandSeparator={'.'} decimalSeparator={','} prefix={'R$'} />
 	}
 	else {
 		return null;
